@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>TODO list</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style TYPE="text/css">
+
+        h1 {
+            text-align: center; /* center checkbox horizontally */
+            vertical-align: middle; /* center checkbox vertically */
+        }
+@font-face {
+    font-family: myFont;
+    src: url(sansation_light.woff);
+}
+
+#b {
+    position: relative;
+    bottom: 0;
+}
+    </style>
+
+    <script>
+
+      function addRow() {
+      "use strict";
+
+      var tableBody = document.getElementById("table-body");
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.name = "name";
+      checkbox.value = "value";
+      checkbox.id = "id";
+      var td1 = document.createElement("td");
+      var td2 = document.createElement("td");
+      var td3 = document.createElement("td");    
+      var row = document.createElement("tr");
+      //td1.innerHTML = document.getElementById("price").value;
+
+      td2.innerHTML  = document.getElementById("task").value;
+      td3.innerHTML  = document.getElementById("descr").value;
+
+      td1.appendChild(checkbox);
+      row.appendChild(td1);
+      row.appendChild(td2);
+      row.appendChild(td3); 
+
+      tableBody.appendChild(row);
+}
+
+    </script>
+</head>
+
+<body>
+<h1> My TODO list </h1>
+
+		<hr class="featurette-divider">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-7">
+          Task:
+          <input type="text" name="task" id="task" />
+          <br />
+				</div>
+				<div class="col-md-14">
+          Description:
+          <input type="text" name="descr" id="descr" />
+          <br /><br />
+				</div>
+				<div class="col-md-15">
+          <input type="button" value="Add Task!" onClick="addRow()" id="add">
+          <br /><br />
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+
+  <table class="table" id="table">
+    <thead id="table-head">
+    <tr>
+        <th>Status</th>
+        <th>TODO</th>
+        <th>Description</th>
+    </tr>
+
+    </thead>
+    <tbody id="table-body">
+      <tr>
+        <td><input type="checkbox" name="myTextEditBox" value="checked" /></td>
+        <td>Table design</td>
+        <td>Create a draft of fields relations</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+		<div class="container" id = "b">
+			<footer>
+				<p class="pull-right"><a href="#">Back to top</a></p>
+			</footer>
+		</div>
+</body>
+</html>
