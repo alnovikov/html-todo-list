@@ -1,2 +1,2 @@
 # html-todo-list
-Quick cpde for html to-do list. Just to keep the code
+Once upon a time spent 15 mins to write a custom to-do list tool and just want to keep the code here...
